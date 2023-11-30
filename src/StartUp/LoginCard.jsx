@@ -76,7 +76,7 @@ export default function LoginCard() {
 
 		console.log("Inputs: ", inputs);
 		try {
-			const res = await fetch("https://cc-backend-p48p.onrender.com/api/users/login", {
+			const res = await fetch("/api/users/login", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
