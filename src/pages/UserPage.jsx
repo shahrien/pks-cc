@@ -26,7 +26,7 @@ const UserPage = () => {
 			if (!user) return;
 			setFetchingPosts(true);
 			try {
-				const res = await fetch(`/api/posts/user/${username}`);
+				const res = await fetch(`https://cc-backend-p48p.onrender.com//api/posts/user/${username}`);
 				const data = await res.json();
 				console.log(data);
 				setPosts(data);
@@ -45,7 +45,7 @@ const UserPage = () => {
 	useEffect(() => {
         const fetchCourses = async () => {
             try {
-                const response = await fetch(`/api/lecturer/getCourses/${currentUser._id}`, {
+                const response = await fetch(`https://cc-backend-p48p.onrender.com//api/lecturer/getCourses/${currentUser._id}`, {
                     method: "GET"
                 });
                 const data = await response.json();
